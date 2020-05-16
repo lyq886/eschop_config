@@ -1,0 +1,27 @@
+server:
+  port: 9091
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka
+  #instance:
+    #instance-id: productService
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: product-service
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/eschop?serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  type-aliases-package: com.neu.domain
+  configuration:
+    cache-enabled: true
+    lazy-loading-enabled: true
+  mapper-locations: classpath:/mapper/*Mapper.xml
+
+
