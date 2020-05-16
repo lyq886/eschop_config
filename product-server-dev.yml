@@ -2,15 +2,11 @@ server:
   port: 9091
 eureka:
   client:
-    service-url:
-      defaultZone: http://localhost:1111/eureka
-  #instance:
+    #instance:
     #instance-id: productService
     prefer-ip-address: true
 
 spring:
-  application:
-    name: product-service
   datasource:
     username: root
     password: root
@@ -23,5 +19,3 @@ mybatis:
     cache-enabled: true
     lazy-loading-enabled: true
   mapper-locations: classpath:/mapper/*Mapper.xml
-
-
